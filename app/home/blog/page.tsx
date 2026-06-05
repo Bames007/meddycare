@@ -33,7 +33,7 @@ const ALL_POSTS = [
     category: "Authority",
     date: "May 5, 2026",
     readTime: "5 min read",
-    img: "https://images.unsplash.com/photo-1581579438707-fd89eedd0709?q=80&w=800",
+    img: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
   },
   {
     slug: "why-respite-care-matters",
@@ -42,7 +42,7 @@ const ALL_POSTS = [
     category: "Empathy",
     date: "April 28, 2026",
     readTime: "3 min read",
-    img: "https://images.unsplash.com/photo-1507206130111-32fc67c2d502?q=80&w=800",
+    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200",
   },
   {
     slug: "dementia-at-home",
@@ -52,7 +52,7 @@ const ALL_POSTS = [
     category: "Specialist",
     date: "April 20, 2026",
     readTime: "7 min read",
-    img: "https://images.unsplash.com/photo-1596495577886-d920f1fb7535?q=80&w=800",
+    img: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=800",
   },
   {
     slug: "live-in-vs-visiting",
@@ -71,7 +71,7 @@ const ALL_POSTS = [
     category: "Finance",
     date: "April 5, 2026",
     readTime: "6 min read",
-    img: "https://images.unsplash.com/photo-1582719471137-f09caabf1fa9?q=80&w=800",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800",
   },
   {
     slug: "loneliness-elderly",

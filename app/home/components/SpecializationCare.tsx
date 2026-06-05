@@ -74,24 +74,24 @@ export default function SpecialistCare() {
               whileHover={{ y: -4 }}
               className={`group relative p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between overflow-hidden ${
                 item.size === "large"
-                  ? "md:col-span-2 bg-[#F3EEF8] border-[#E0D7EB] hover:border-[#552976]/40"
+                  ? "md:col-span-2 bg-[#F3EEF8] border-[#E0D7EB] hover:border-[#552976]/30"
                   : "bg-white border-[#E5E3E0] hover:border-[#552976]/30"
               }`}
               style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.02)" }}
             >
-              {/* Icon with subtle scaling */}
+              {/* Icon – consistent dark purple */}
               <div
                 className="transition-all duration-300 group-hover:scale-105"
-                style={{ color: "#4A1D6E" }} // darker purple for contrast
+                style={{ color: colors.brand.logoPurple }}
               >
                 <item.icon size={32} strokeWidth={1.5} />
               </div>
 
-              {/* Title */}
+              {/* Title – always dark, readable */}
               <h3
                 className="text-sm font-bold uppercase tracking-wide transition-colors duration-300 group-hover:text-[#552976]"
                 style={{
-                  color: "#FAF2FF",
+                  color: colors.structure.primary, // #140E1B
                   fontFamily: typography.fontFamilies.body,
                 }}
               >
