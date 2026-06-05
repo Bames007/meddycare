@@ -32,22 +32,40 @@ export default function GettingStarted() {
     <section className="py-24 px-6 bg-white border-t border-gray-100">
       <div className="max-w-[1400px] mx-auto">
         {/* HEADER */}
-        <div className="mb-20">
-          <span
+        <div className="w-full max-w-[1400px] mx-auto px-6 mb-20 border-b border-gray-100 pb-10">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-xs font-mono font-bold tracking-[0.2em] uppercase mb-4 block"
             style={{ color: colors.brand.logoPurple }}
           >
             Getting Started
-          </span>
-          <h2
-            className="text-4xl sm:text-5xl xl:text-[clamp(2.8rem,4vw,4.8rem)] font-black tracking-tighter leading-[0.92] text-gray-900 uppercase"
-            style={{ fontFamily: typography.fontFamilies.heading }}
-          >
-            3 Simple Steps to <br />
-            <span className="italic font-light text-gray-400">
-              Starting Care.
-            </span>
-          </h2>
+          </motion.span>
+
+          <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="col-span-1 lg:col-span-8 text-4xl sm:text-5xl xl:text-[clamp(2.8rem,4vw,4.8rem)] font-black tracking-tighter leading-[0.92] text-gray-900 uppercase"
+              style={{ fontFamily: typography.fontFamilies.heading }}
+            >
+              A Gentle Path <br />
+              <span className="italic font-light text-gray-400">
+                To Quality Care.
+              </span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="col-span-1 lg:col-span-4 text-gray-500 text-sm xl:text-base leading-relaxed font-medium lg:pb-1"
+              style={{ fontFamily: typography.fontFamilies.body }}
+            >
+              We’ve replaced complex paperwork with a human-first approach.
+              Follow these three simple steps to connect with a carer who truly
+              understands your family’s needs.
+            </motion.p>
+          </div>
         </div>
 
         {/* REFINED GRID */}

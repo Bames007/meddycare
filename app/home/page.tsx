@@ -15,6 +15,8 @@ import { Footer } from "./components/Footer";
 import { PaymentPlans } from "./components/Payment";
 import { ContactSection } from "./components/Contact";
 import { Header } from "./components/Header";
+import BlogPage from "./blog/page";
+import BlogHub from "./blog/page";
 
 export default function HomePage() {
   return (
@@ -27,11 +29,11 @@ export default function HomePage() {
       <div id="about">
         <About />
       </div>
-      <div id="trust">
-        <Trust />
-      </div>
       <div id="why-us">
         <WhyChooseUs />
+      </div>
+      <div id="trust">
+        <Trust />
       </div>
       <div id="getting-started">
         <GettingStarted />
@@ -48,6 +50,7 @@ export default function HomePage() {
       <div id="tech">
         <OurTechnology />
       </div>
+      <BlogHub />
       <div id="commitment">
         <CommitmentAndImpact />
       </div>

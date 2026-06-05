@@ -49,89 +49,94 @@ export default function CommitmentAndImpact() {
   const { colors, typography } = DESIGN_TOKENS;
 
   return (
-    <section className="py-32 px-6 bg-white">
-      <div className="max-w-[1200px] mx-auto">
-        {/* COMMITMENT GRID */}
-        <div className="mb-32">
-          <span
-            className="text-xs font-mono font-bold tracking-[0.3em] uppercase mb-6 block"
-            style={{ color: colors.brand.logoPurple }}
-          >
-            Our Commitment
-          </span>
-          <h2
-            className="text-[clamp(3rem,6vw,5rem)] font-black uppercase tracking-tighter leading-[0.95] text-gray-900 mb-20"
-            style={{ fontFamily: typography.fontFamilies.heading }}
-          >
-            Care that feels <br />
-            <span className="italic font-light text-gray-400">
-              like family.
+    <section className="py-32 bg-white px-6">
+      <div className="max-w-[1400px] mx-auto">
+        {/* REFINED HEADER */}
+        <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-12">
+          <div className="max-w-2xl">
+            <span
+              className="text-[10px] font-mono font-bold tracking-[0.3em] uppercase mb-6 block"
+              style={{ color: colors.brand.logoPurple }}
+            >
+              Our Core Commitment
             </span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PROMISES.map((item, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -5 }}
-                className="p-8 rounded-[2rem] bg-gray-50 border border-gray-100 hover:border-gray-200 transition-all"
-              >
-                <div
-                  className="p-3 w-fit rounded-2xl bg-white mb-6 shadow-sm"
-                  style={{ color: colors.brand.logoPurple }}
-                >
-                  <item.icon size={24} />
-                </div>
-                <h3
-                  className="text-sm font-black uppercase tracking-tight mb-3"
-                  style={{ color: colors.brand.logoPurple }}
-                >
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed font-medium">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* IMPACT / TESTIMONIAL BLOCK (PINK GRADIENT) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative rounded-[3rem] p-12 md:p-20 overflow-hidden shadow-2xl"
-          style={{ backgroundColor: colors.brand.logoPink }}
-        >
-          {/* Subtle overlay texture/glow */}
-          <div className="absolute inset-0 bg-black/5" />
-
-          <div className="relative z-10 max-w-4xl">
-            <div className="flex gap-1 mb-8">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={20} className="fill-white text-white" />
-              ))}
-            </div>
-
-            <h3
-              className="text-white text-[clamp(2rem,4vw,3.5rem)] font-black mb-12 leading-[1.1]"
+            <h2
+              className="text-[clamp(3rem,6vw,5.5rem)] font-black uppercase tracking-tighter leading-[0.9] text-gray-900"
               style={{ fontFamily: typography.fontFamilies.heading }}
             >
-              "MeddyCare gave us our mum back. She's happy, safe, and exactly
-              where she wants to be."
-            </h3>
+              Care that feels <br />{" "}
+              <span className="italic font-light text-gray-400">
+                like family.
+              </span>
+            </h2>
+          </div>
+          <p className="text-gray-500 max-w-sm text-lg leading-relaxed">
+            We don't just provide care; we provide a sanctuary. Designed for
+            those who value independence, comfort, and human connection.
+          </p>
+        </div>
 
-            <div className="flex items-center gap-6 pt-8 border-t border-white/20">
-              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-white font-black text-sm uppercase">
+        {/* BENTO-INSPIRED GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-32">
+          {PROMISES.map((item, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ y: -8 }}
+              className="group p-10 rounded-[2.5rem] bg-gray-50/50 border border-gray-100 hover:bg-white hover:border-gray-200 transition-all duration-500"
+            >
+              <div
+                className="mb-8 p-4 w-fit rounded-2xl bg-white shadow-sm border border-gray-100 transition-transform group-hover:scale-110"
+                style={{ color: colors.brand.logoPurple }}
+              >
+                <item.icon size={28} strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-black uppercase tracking-tight mb-3 text-gray-900">
+                {item.title}
+              </h3>
+              <p className="text-gray-500 leading-relaxed font-medium text-sm">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* REFINED TESTIMONIAL BLOCK */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="relative rounded-[3rem] p-16 md:p-24 bg-gray-900 overflow-hidden"
+        >
+          <div
+            className="absolute top-0 right-0 w-1/2 h-full opacity-10"
+            style={{
+              background: `linear-gradient(to left, ${colors.brand.logoPink}, transparent)`,
+            }}
+          />
+
+          <div className="relative z-10 max-w-3xl">
+            <div className="flex gap-1 mb-10">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  size={24}
+                  className="fill-[#FFB800] text-[#FFB800]"
+                />
+              ))}
+            </div>
+            <blockquote className="text-4xl md:text-5xl font-light text-white leading-[1.2] mb-12">
+              "MeddyCare gave us our mum back. She's happy, safe, and exactly
+              where she wants to be—in her own home."
+            </blockquote>
+            <div className="flex items-center gap-6">
+              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-xl">
                 M
               </div>
               <div>
-                <p className="text-white font-black uppercase tracking-widest text-sm">
-                  Margaret's Family, Surrey
+                <p className="text-white font-bold uppercase tracking-widest">
+                  Margaret's Family
                 </p>
-                <p className="text-white/70 text-xs mt-1 font-medium">
-                  Verified Success Story • 2026
+                <p className="text-white/50 text-sm italic">
+                  Surrey, United Kingdom
                 </p>
               </div>
             </div>
